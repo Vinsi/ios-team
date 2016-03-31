@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# scripts/bootstrap: Creates conichi directory.
+#                    Clones all conichi ios projects.
+
+set -e
+
+green=`tput setaf 2`
+reset=`tput sgr0`
+conichi_directory="$($HOME)/conichi"
+
+cd "$($HOME)"
+
+echo "${green}===== Creating conichi directory for all ios projects… =====${reset}"
+mkdir conichi_directory
+
+echo "${green}===== Moving into conichi directory… =====${reset}"
+cd conichi_directory
+
+### ios-guest setup
+
+echo "${green}===== Cloning ios-guest repo… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-guest.git
+
+### ios-merchant setup
+
+echo "${green}===== Cloning ios-merchant repo… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-merchant.git
+
+### ios-beacon-tool setup
+
+echo "${green}===== Cloning ios-beacon-tool repo… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-beacon-tool.git ios-beacon-tool
+
+echo "${green}===== Bootstrap ios-beacon-tool project… =====${reset}"
+cd ios-beacon-tool
+make bootstrap
+cd conichi_directory
+
+### ios-sdk setup
+
+echo "${green}===== Cloning ios-sdk repo… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-sdk.git
+
+### ios-utilities setup
+
+echo "${green}===== Cloning ios-utilities repo… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-utilities.git
