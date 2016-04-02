@@ -10,7 +10,7 @@ set -e
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-if [ $(which brew) = "brew not found" ]; then
+if [ $(which brew) = "" ]; then
   echo "${green}===== Installing Homebrew… =====${reset}"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   man yes
