@@ -1,0 +1,128 @@
+require 'yaml'
+
+fastlane_version "1.70.0"
+
+default_platform :ios
+
+platform :ios do
+
+  ######################### PUBLIC UTILITIES ##########################
+
+  lane :put_upcoming_to_releases do
+    changelog_data = get_changelog_data
+    upcoming = changelog_data["upcoming"].clone
+    changelog_data["upcoming"]["version"] = nil
+    changelog_data["upcoming"]["notes"] = nil
+    changelog_data["releases"].unshift(upcoming)
+    save_changelog_data(
+      changelog_data: changelog_data
+    )
+    git_commit_shell(
+      message: "Move upcoming version to releases in CHANGELOG"
+    )
+  end
+
+  lane :run_tests do |options|
+    scheme = options[:scheme]
+
+    scan(
+      scheme: scheme,
+      clean: true,
+      code_coverage: true,
+      skip_slack: true
+    )
+  end
+
+  lane :get_changelog_data do
+    changelog_data = YAML.load(File.open "../CHANGELOG.yml")
+    changelog_data
+  end
+
+  lane :save_changelog_data do |options|
+    changelog_data = options[:changelog_data]
+    File.open("../CHANGELOG.yml", 'w') { |f| YAML.dump(changelog_data, f) }
+  end
+
+  lane :get_releases do
+    changelog_data = get_changelog_data
+    releases = changelog_data["releases"]
+    releases
+  end
+
+  lane :get_upcoming do
+    changelog_data = get_changelog_data
+    upcoming = changelog_data["upcoming"]
+    upcoming
+  end
+
+  lane :get_upcoming_version do
+    upcoming = get_upcoming
+    upcoming_version = upcoming["version"]
+    upcoming_version
+  end
+
+  lane :get_upcoming_notes do
+    upcoming = get_upcoming
+    upcoming_notes =  "* #{upcoming["notes"].join "\n* "} \n\n"
+    upcoming_notes
+  end
+
+  lane :git_commit_shell do |options|
+    message = options[:message]
+    sh("git commit -am '#{message}'")
+  end
+
+  lane :git_add_or_update_tag do |options|
+    tag_name = options[:tag_name]
+    remote = options[:remote]
+    branch = options[:branch]
+
+    sh("git pull #{remote} #{branch} --tags")
+
+    last_tag_name = last_git_tag
+    if last_tag_name == tag_name
+      sh("git tag #{tag_name} -d")
+      sh("git push #{remote} :refs/tags/#{tag_name}")
+    end
+
+    sh("git tag #{tag_name}")
+    sh("git push #{remote} --tags")
+  end
+
+  lane :set_or_update_github_release do |options|
+    release_name = options[:release_name]
+    description = options[:description]
+    repository_name = options[:repository_name]
+    tag_name = options[:tag_name]
+    api_token = options[:api_token]
+
+    release = get_github_release(
+      url: repository_name,
+      version: release_name,
+      api_token: api_token
+    )
+
+    puts "#{release}"
+
+    if release != nil
+      release_id = release['id'].to_s
+      edit_github_release(
+        repository_name: repository_name,
+        id: release_id,
+        description: description,
+        tag_name: tag_name,
+        name: release_name,
+        api_token: api_token
+      )
+    else
+      set_github_release(
+        repository_name: repository_name,
+        api_token: api_token,
+        name: release_name,
+        tag_name: tag_name,
+        description: description
+      )
+    end
+  end
+
+end
