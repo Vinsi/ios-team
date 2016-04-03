@@ -7,15 +7,14 @@ set -e
 
 green=`tput setaf 2`
 reset=`tput sgr0`
-conichi_directory="$($HOME)/conichi"
 
-cd "$($HOME)"
+cd $($HOME)
 
 echo "${green}===== Creating conichi directory for all ios projects… =====${reset}"
-mkdir conichi_directory
+mkdir conichi
 
 echo "${green}===== Moving into conichi directory… =====${reset}"
-cd conichi_directory
+cd conichi
 
 ### ios-guest setup
 

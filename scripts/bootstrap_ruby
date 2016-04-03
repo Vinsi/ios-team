@@ -10,14 +10,16 @@ set -e
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-if [ $(which brew) = "brew not found" ]; then
+if [ -z $(which brew) ]; then
   echo "${green}===== Installing Homebrew… =====${reset}"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  man yes
 else
   echo "${green}===== Updating Homebrew… =====${reset}"
   brew update
 fi
+
+echo "${green}===== Installing openssl… =====${reset}"
+brew install openssl
 
 if [ $(xcode-select -p) = 2 ]; then
   echo "${green}===== Installing command line tools… =====${reset}"
@@ -27,7 +29,7 @@ fi
 echo "${green}===== Installing gnupg… =====${reset}"
 brew install gnupg gnupg2
 
-if [ $(which rvm) = "rvm not found" ]; then
+if [ -z $(which rvm) ]; then
   echo "${green}===== Requesting keys to install rvm… =====${reset}"
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
@@ -35,14 +37,19 @@ if [ $(which rvm) = "rvm not found" ]; then
   \curl -sSL https://get.rvm.io | bash -s stable
 fi
 
-# This is temporary for current shell session. After the script finishes user has to add it to .bash_profile
+echo "${green}===== Setting rvm environment… =====${reset}"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
+
+echo "${green}===== Installing ruby 2.2.3… =====${reset}"
+rvm install 2.2.3 --disable-binary
+rvm alias create default ruby-2.2.3
+rvm use ruby-2.2.3
 
 echo "${green}===== Installing bundler… =====${reset}"
 gem install bundler
 
-if [ -f "Gemfile" ]; then
+if [ -f "Gemfile" ] || [ -f "../Gemfile" ]; then
   echo "${green}===== Installing gem dependencies… =====${reset}"
   bundle check --path vendor/gems >/dev/null 2>&1  || {
     bundle install --path vendor/gems --quiet --without production
