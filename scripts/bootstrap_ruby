@@ -43,6 +43,8 @@ export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
 echo "${green}===== Installing ruby 2.2.3… =====${reset}"
 rvm install 2.2.3 --disable-binary
+rvm alias create default ruby-2.2.3
+rvm use ruby-2.2.3
 
 echo "${green}===== Installing bundler… =====${reset}"
 gem install bundler
