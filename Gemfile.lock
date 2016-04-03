@@ -281,6 +281,7 @@ DEPENDENCIES
   cocoapods (~> 0.39)
   danger
   fastlane
+  match
 
 BUNDLED WITH
    1.11.2
