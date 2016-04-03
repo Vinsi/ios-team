@@ -19,3 +19,7 @@ project.xcworkspace
 
 # Gemfile
 vendor/*
+
+# Fastlane
+fastlane/report.xml
+fastlane/test_output/
