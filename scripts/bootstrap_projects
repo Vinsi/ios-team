@@ -45,3 +45,6 @@ cd $($HOME/conichi)
 
 echo "${green}===== Cloning ios-utilities repo… =====${reset}"
 git clone git@github.com:conichiGMBH/ios-utilities.git
+cd ios-utilities
+fastlane bootstrap
+cd $($HOME/conichi)
