@@ -72,12 +72,36 @@ platform :ios do
     sh("git commit -am '#{message}'")
   end
 
+  lane :git_merge_branch do |options|
+    source_branch = options[:source_branch]
+    sh("git merge #{source_branch}")
+  end
+
+  lane :git_checkout_branch do |options|
+    destination_branch = options[:destination_branch]
+    sh("git checkout #{destination_branch}")
+  end
+
+  lane :git_branch_exists_on_remote do |options|
+    remote = options[:remote]
+    branch = options[:branch]
+    branch_exist = sh("git ls-remote --heads #{remote} #{branch} | wc -l")
+    branch_exist
+  end
+
   lane :git_add_or_update_tag do |options|
     tag_name = options[:tag_name]
     remote = options[:remote]
     branch = options[:branch]
 
-    sh("git pull #{remote} #{branch} --tags")
+    branch_exist = git_branch_exists_on_remote(
+      remote: remote,
+      branch: branch
+    )
+
+    if branch_exist.to_i != 0
+      sh("git pull #{remote} #{branch} --tags")
+    end
 
     last_tag_name = last_git_tag
     if last_tag_name == tag_name
