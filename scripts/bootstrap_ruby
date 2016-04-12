@@ -46,15 +46,12 @@ rvm install 2.2.3 --disable-binary
 rvm alias create default ruby-2.2.3
 rvm use ruby-2.2.3
 
-echo "${green}===== Installing bundler… =====${reset}"
+echo "${green}===== Installing gems… =====${reset}"
 gem install bundler
-
-if [ -f "Gemfile" ] || [ -f "../Gemfile" ]; then
-  echo "${green}===== Installing gem dependencies… =====${reset}"
-  bundle check --path vendor/gems >/dev/null 2>&1  || {
-    bundle install --path vendor/gems --quiet --without production
-  }
-fi
+gem install cocoapods
+gem install fastlane
+gem install danger
+gem install match
 
 echo "${green}===== Script is succeeded… =====${reset}"
 echo "${green}===== Please put next two lines into your .bash_profile =====${reset}"

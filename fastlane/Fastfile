@@ -13,7 +13,11 @@ platform :ios do
     upcoming = changelog_data["upcoming"].clone
     changelog_data["upcoming"]["version"] = nil
     changelog_data["upcoming"]["notes"] = nil
-    changelog_data["releases"].unshift(upcoming)
+    if changelog_data["releases"].count > 0
+      changelog_data["releases"].unshift(upcoming)
+    else
+      changelog_data["releases"].push(upcoming)
+    end
     save_changelog_data(
       changelog_data: changelog_data
     )
