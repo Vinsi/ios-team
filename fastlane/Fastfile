@@ -10,6 +10,7 @@ platform :ios do
 
   lane :setup_new_release do |options|
 
+    develop_branch = options['develop_branch']
     xcodeproject = options['xcodeproject']
     github_remote = options['github_remote']
 
