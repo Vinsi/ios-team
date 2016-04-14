@@ -8,6 +8,51 @@ platform :ios do
 
   ######################### PUBLIC UTILITIES ##########################
 
+  lane :setup_new_release do |options|
+
+    xcodeproject = options['xcodeproject']
+    github_remote = options['github_remote']
+
+    possible_upcoming_versions = ["patch", "minor", "major"]
+    possible_versions_indexes = ["1", "2", "3"]
+    upcoming_version = prompt(text: "You must provide a new version to set. Available:
+    1) #{possible_upcoming_versions[0]}
+    2) #{possible_upcoming_versions[1]}
+    3) #{possible_upcoming_versions[2]}")
+
+    if possible_versions_indexes.include? upcoming_version
+      increment_version_number(
+        bump_type: possible_upcoming_versions[upcoming_version.to_i - 1]
+      )
+    elsif possible_upcoming_versions.include? upcoming_version
+      increment_version_number(
+        bump_type: upcoming_version
+      )
+    else
+      possible_inputs = ["1", "2", "3", possible_upcoming_versions[0], possible_upcoming_versions[1], possible_upcoming_versions[2]]
+      puts "Incorrect new upcoming version. Possible inputs: #{possible_inputs.to_s}"
+    end
+
+    new_upcoming_version = get_version_number(
+      xcodeproj: xcodeproject
+    )
+
+    commit_version_bump message: "Bump version to #{new_upcoming_version}."
+
+    remote = github_remote
+    push_to_git_remote(
+      remote: remote,
+      local_branch: develop_branch,
+      remote_branch: develop_branch
+    )
+
+    changelog_data = get_changelog_data
+    changelog_data["upcoming"]["version"] = new_upcoming_version
+    save_changelog_data(
+      changelog_data: changelog_data
+    )
+  end
+
   lane :put_upcoming_to_releases do
     changelog_data = get_changelog_data
     upcoming = changelog_data["upcoming"].clone
