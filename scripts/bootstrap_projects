@@ -19,26 +19,33 @@ cd conichi
 ### ios-guest setup
 
 echo "${green}===== Cloning ios-guest repo… =====${reset}"
-git clone git@github.com:conichiGMBH/ios-guest.git
+git clone git@github.com:conichiGMBH/ios-guest.git ios-guest
+cd ios-guest
+make bootstrap
+cd $($HOME/conichi)
 
 ### ios-merchant setup
 
 echo "${green}===== Cloning ios-merchant repo… =====${reset}"
-git clone git@github.com:conichiGMBH/ios-merchant.git
+git clone git@github.com:conichiGMBH/ios-merchant.git ios-merchant
+cd ios-merchant
+make bootstrap
+cd $($HOME/conichi)
 
 ### ios-beacon-tool setup
 
 echo "${green}===== Cloning ios-beacon-tool repo… =====${reset}"
 git clone git@github.com:conichiGMBH/ios-beacon-tool.git ios-beacon-tool
+cd ios-beacon-tool
+make bootstrap
+cd $($HOME/conichi)
 
 ### ios-sdk setup
 
 echo "${green}===== Cloning ios-sdk repo… =====${reset}"
-git clone git@github.com:conichiGMBH/ios-sdk.git
-
-echo "${green}===== Bootstrap ios-sdk… =====${reset}"
+git clone git@github.com:conichiGMBH/ios-sdk.git ios-sdk
 cd ios-sdk
-fastlane bootstrap
+make bootstrap
 cd $($HOME/conichi)
 
 ### ios-utilities setup
@@ -46,5 +53,5 @@ cd $($HOME/conichi)
 echo "${green}===== Cloning ios-utilities repo… =====${reset}"
 git clone git@github.com:conichiGMBH/ios-utilities.git
 cd ios-utilities
-fastlane bootstrap
+make bootstrap
 cd $($HOME/conichi)
