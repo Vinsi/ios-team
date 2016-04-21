@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# scripts/bootstrap: Installs homebrew.
+# scripts/bootstrap_ruby: Installs homebrew.
 #                    Installs rvm.
 #                    Installs ruby.
 #                    Installs gems required to work with conichi ios projects
