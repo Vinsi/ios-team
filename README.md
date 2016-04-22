@@ -1,9 +1,17 @@
-# Welcome
+Welcome
+============
 
-This repo contains all required information about iOS projects at conichi and guidelines to work on those projects.
+This repo contains all required information about iOS projects at conichi and guidelines to contribute into those projects. 
 
 ## Fresh start
 
-If you're a new developer or just need to start everything from scratch simply run scripts/bootstrap and go take ☕.
-* Install or update Homebrew
-* 
+If you're a new developer in a team to install all requirements run following commands: 
+
+    git clone https://github.com/conichiGMBH/ios-team-guidelines.git
+    cd ios-team-guidelines
+    scripts/bootstrap
+
+
+Go take ☕ and be ready to 🚀.
+
+
