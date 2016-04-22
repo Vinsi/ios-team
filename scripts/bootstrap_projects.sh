@@ -10,7 +10,7 @@ reset=`tput sgr0`
 
 cd $($HOME)
 
-echo "${green}===== Creating conichi directory for all ios projects… =====${reset}"
+echo "${green}===== Creating home for all ios projects… =====${reset}"
 mkdir conichi
 
 echo "${green}===== Moving into conichi directory… =====${reset}"
