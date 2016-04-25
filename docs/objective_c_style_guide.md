@@ -114,7 +114,7 @@ Except custom setters and getters instance variables should be avoid.
 Properties should be named as clear as possible, following by a type name if can be not clear in context.
 
 ```objc
-@property (nonatomic, strong) NSString *photoURLString;
+@property (nonatomic, copy) NSString *photoURLString;
 ```
 
 Not
