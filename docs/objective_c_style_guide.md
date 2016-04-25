@@ -290,7 +290,7 @@ For `.h` whenever possible use `@class` directive instead of `#import "Foo.h"`
 
 @interface Foo: NSObject
 
-@property (nonatomic, strong) MyCustomClass \*bar
+@property (nonatomic, strong) MyCustomClass *bar
 
 @end
 ```
@@ -301,7 +301,7 @@ Not
 
 @interface Foo: NSObject
 
-@property (nonatomic, strong) MyCustomClass \*bar
+@property (nonatomic, strong) MyCustomClass *bar
 
 @end
 ```
@@ -312,14 +312,14 @@ For class constructor methods use `instancetype`.
 
 ```objc
 @interface CNIBeacon
-+ (instancetype)beaconWithMajor:(NSNumber \*)major;
++ (instancetype)beaconWithMajor:(NSNumber *)major;
 @end
 ```
 
 Not
 ```objc
 @interface CNIBeacon
-+ (CNIBeacon \*)beaconWithMajor:(NSNumber \*)major;
++ (CNIBeacon *)beaconWithMajor:(NSNumber *)major;
 @end
 ```
 
@@ -349,9 +349,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CNISDKVenue: NSObject
 
-@property (nonatomic, copy, readonly, nullable) NSString \*phone;
+@property (nonatomic, copy, readonly, nullable) NSString *phone;
 
-- (void)setPhone:(nullable NSString \*)phone;
+- (void)setPhone:(nullable NSString *)phone;
 
 @end
 
