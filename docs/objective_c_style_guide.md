@@ -99,7 +99,6 @@ Not
 
 or
 
-```objc
 - (void)dynamicMethod {
 
     //Do something
