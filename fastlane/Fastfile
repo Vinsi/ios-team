@@ -142,8 +142,7 @@ platform :ios do
       sh("git pull #{remote} #{branch} --tags")
     end
 
-    last_tag_name = last_git_tag
-    if last_tag_name == tag_name
+    if git_tag_exists(tag_name)
       sh("git tag #{tag_name} -d")
       sh("git push #{remote} :refs/tags/#{tag_name}")
     end
