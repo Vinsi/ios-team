@@ -157,14 +157,13 @@ platform :ios do
     repository_name = options[:repository_name]
     tag_name = options[:tag_name]
     api_token = options[:api_token]
+    upload_assets = options[:upload_assets] ? options[:upload_assets] : []
 
     release = get_github_release(
       url: repository_name,
       version: release_name,
       api_token: api_token
     )
-
-    puts "#{release}"
 
     if release != nil
       release_id = release['id'].to_s
@@ -174,7 +173,8 @@ platform :ios do
         description: description,
         tag_name: tag_name,
         name: release_name,
-        api_token: api_token
+        api_token: api_token,
+        upload_assets: upload_assets
       )
     else
       set_github_release(
