@@ -157,7 +157,7 @@ platform :ios do
     repository_name = options[:repository_name]
     tag_name = options[:tag_name]
     api_token = options[:api_token]
-    upload_assets = options[:upload_assets] ? options[:upload_assets] : []
+    upload_asset = options[:upload_asset]
 
     release = get_github_release(
       url: repository_name,
@@ -173,16 +173,21 @@ platform :ios do
         description: description,
         tag_name: tag_name,
         name: release_name,
-        api_token: api_token,
-        upload_assets: upload_assets
+        api_token: api_token
       )
+      if upload_assets.count > 0
+        upload_asset_for_github_release(
+          file_path: upload_asset
+        )
+      end
     else
       set_github_release(
         repository_name: repository_name,
         api_token: api_token,
         name: release_name,
         tag_name: tag_name,
-        description: description
+        description: description,
+        upload_assets: upload_asset ? [upload_asset] : []
       )
     end
   end
