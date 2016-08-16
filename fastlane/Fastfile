@@ -175,7 +175,7 @@ platform :ios do
         name: release_name,
         api_token: api_token
       )
-      if upload_asset.count > 0
+      if upload_asset
         upload_url = release['upload_url']
         upload_asset_for_github_release(
           file_path: upload_asset,
