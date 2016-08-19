@@ -162,23 +162,23 @@ platform :ios do
       api_token: api_token
     )
 
-    if release['id'].nil?
+    if release
+      edit_github_release(
+        repository_name: repository_name,
+        id: release['id'].to_s,
+        description: description,
+        tag_name: tag_name,
+        name: release_name,
+        api_token: api_token,
+        upload_assets: upload_assets
+      )
+    else
       set_github_release(
         repository_name: repository_name,
         api_token: api_token,
         name: release_name,
         tag_name: tag_name,
         description: description,
-        upload_assets: upload_assets
-      )
-    else
-      edit_github_release(
-        repository_name: repository_name,
-        id: release_id,
-        description: description,
-        tag_name: tag_name,
-        name: release_name,
-        api_token: api_token,
         upload_assets: upload_assets
       )
     end
