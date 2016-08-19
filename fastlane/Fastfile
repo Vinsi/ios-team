@@ -124,12 +124,10 @@ platform :ios do
   lane :git_branch_exists_on_remote do |options|
     remote = options[:remote]
     branch = options[:branch]
-    branch_exist = sh("git ls-remote --heads #{remote} #{branch} | wc -l")
-    branch_exist
+    sh("git ls-remote --heads #{remote} #{branch} | wc -l")
   end
 
   lane :git_add_or_update_tag do |options|
-    tag_name = options[:tag_name]
     remote = options[:remote]
     branch = options[:branch]
 
@@ -138,10 +136,9 @@ platform :ios do
       branch: branch
     )
 
-    if branch_exist.to_i != 0
-      sh("git pull #{remote} #{branch} --tags")
-    end
+    sh("git pull #{remote} #{branch} --tags") if branch_exist.to_i
 
+    tag_name = options[:tag_name]
     if git_tag_exists(tag: tag_name)
       sh("git tag #{tag_name} -d")
       sh("git push #{remote} :refs/tags/#{tag_name}")
@@ -157,7 +154,7 @@ platform :ios do
     repository_name = options[:repository_name]
     tag_name = options[:tag_name]
     api_token = options[:api_token]
-    upload_asset = options[:upload_asset]
+    upload_assets = options[:upload_assets]
 
     release = get_github_release(
       url: repository_name,
@@ -165,31 +162,24 @@ platform :ios do
       api_token: api_token
     )
 
-    if release != nil
-      release_id = release['id'].to_s
-      edit_github_release(
-        repository_name: repository_name,
-        id: release_id,
-        description: description,
-        tag_name: tag_name,
-        name: release_name,
-        api_token: api_token
-      )
-      if upload_asset
-        upload_url = release['upload_url']
-        upload_asset_for_github_release(
-          file_path: upload_asset,
-          upload_url_template: upload_url
-        )
-      end
-    else
+    if release['id'].nil?
       set_github_release(
         repository_name: repository_name,
         api_token: api_token,
         name: release_name,
         tag_name: tag_name,
         description: description,
-        upload_assets: upload_asset ? [upload_asset] : []
+        upload_assets: upload_assets
+      )
+    else
+      edit_github_release(
+        repository_name: repository_name,
+        id: release_id,
+        description: description,
+        tag_name: tag_name,
+        name: release_name,
+        api_token: api_token,
+        upload_assets: upload_assets
       )
     end
   end
