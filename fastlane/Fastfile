@@ -162,7 +162,7 @@ platform :ios do
       api_token: api_token
     )
 
-    if release
+    if release != nil
       edit_github_release(
         repository_name: repository_name,
         id: release['id'].to_s,
