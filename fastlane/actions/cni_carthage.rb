@@ -55,7 +55,7 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :framework,
                                        description: "Framework name to archive, could be applied only along with the archive command",
                                        is_string: true,
-                                       optional: true)
+                                       optional: true),
           FastlaneCore::ConfigItem.new(key: :use_ssh,
                                        env_name: "FL_CARTHAGE_USE_SSH",
                                        description: "Use SSH for downloading GitHub repositories",
