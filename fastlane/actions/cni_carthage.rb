@@ -1,6 +1,6 @@
 module Fastlane
   module Actions
-    class CarthageAction < Action
+    class CniCarthageAction < Action
       def self.run(params)
         cmd = ["carthage"]
 
