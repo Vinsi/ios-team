@@ -57,7 +57,7 @@ module Fastlane
                                        default_value: [],
                                        is_string: false,
                                        type: Array),
-          FastlaneCore::ConfigItem.new(key: :framework,
+          FastlaneCore::ConfigItem.new(key: :frameworks,
                                        description: "Framework name or names to archive, could be applied only along with the archive command",
                                        is_string: false,
                                        type: Array,
