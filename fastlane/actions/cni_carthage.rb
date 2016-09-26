@@ -8,8 +8,13 @@ module Fastlane
 
         if params[:command] == "update" && params[:dependencies].count > 0
           cmd.concat params[:dependencies]
-        elsif params[:command] == "archive" && params[:framework]
-          cmd << params[:framework]
+        elsif params[:command] == "archive"
+          if params[:frameworks]
+            cmd << params[:frameworks].join(' ')
+          end
+          if
+            cmd << "--output #{params[:output]}"
+          end
         end
 
         cmd << "--use-ssh" if params[:use_ssh]
@@ -53,9 +58,17 @@ module Fastlane
                                        is_string: false,
                                        type: Array),
           FastlaneCore::ConfigItem.new(key: :framework,
-                                       description: "Framework name to archive, could be applied only along with the archive command",
-                                       is_string: true,
+                                       description: "Framework name or names to archive, could be applied only along with the archive command",
+                                       is_string: false,
+                                       type: Array,
                                        optional: true),
+          FastlaneCore::ConfigItem.new(key: :output,
+                                       description: "Output name for the archive, could be applied only along with the archive command. Use following format *.framework.zip",
+                                       is_string: true,
+                                       optional: true,
+                                       verify_block: proc do |value|
+                                         UI.user_error!("Please pass a valid string for output. Use following format *.framework.zip") unless value.end_with?("framework.zip")
+                                       end),
           FastlaneCore::ConfigItem.new(key: :use_ssh,
                                        env_name: "FL_CARTHAGE_USE_SSH",
                                        description: "Use SSH for downloading GitHub repositories",
