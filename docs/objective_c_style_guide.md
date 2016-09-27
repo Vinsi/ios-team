@@ -360,8 +360,21 @@ NS_ASSUME_NONNULL_END
 
 ## Tests
 
-Each test should be named using following pattern:  
+Each test should be named using following pattern unless the BDD framework is used which is preferrable:  
 
 ```objc
 - (void)testThat"Method name"Should"Expected Action"If"Condition"
+```
+
+## Modules
+
+Always use `dynamic import` if possible instead of old-fashioned `#import`
+
+```objc
+@improt CNISDKCoreKit;
+```
+
+Not
+```objc
+#import <CNISDKCoreKit/CNISDKCoreKit.h>
 ```
