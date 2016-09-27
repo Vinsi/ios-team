@@ -371,7 +371,7 @@ Each test should be named using following pattern unless the BDD framework is us
 Always use `dynamic import` if possible instead of old-fashioned `#import`
 
 ```objc
-@improt CNISDKCoreKit;
+@import CNISDKCoreKit;
 ```
 
 Not
