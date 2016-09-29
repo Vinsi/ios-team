@@ -127,6 +127,10 @@ platform :ios do
     sh("git ls-remote --heads #{remote} #{branch} | wc -l")
   end
 
+  lane :git_status_clean? do |options|
+    sh("git status --porcelain").empty?
+  end
+
   lane :git_add_or_update_tag do |options|
     remote = options[:remote]
     branch = options[:branch]
