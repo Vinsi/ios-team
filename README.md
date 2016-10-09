@@ -31,4 +31,4 @@ These guides are not to blindly followed but to discuss when in doubt.
 
 ## Testing
 
-We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta).
+We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta). For the unit tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/).
