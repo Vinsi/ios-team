@@ -1,17 +1,22 @@
 Welcome
 ============
 
-This repo contains all required information about iOS projects at conichi and guidelines to contribute into those projects. 
+The home of iOS conichi team.
 
 ## Fresh start
 
-If you're a new developer in a team to install all requirements run following commands: 
+If you're a new developer in a team start with the following:
 
-    git clone https://github.com/conichiGMBH/ios-team-guidelines.git
-    cd ios-team-guidelines
-    scripts/bootstrap
+```sh
+git clone https://github.com/conichiGMBH/ios-team-guidelines.git
+cd ios-team-guidelines
+scripts/bootstrap
+```
 
+## Guides
 
-Go take ☕ and be ready to 🚀.
+These
 
-
+* [Swift Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/swift_style_guide.md)
+* [Objective-C Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/objective_c_style_guide.md)
+* [Code Review Guide](https://github.com/thoughtbot/guides/tree/master/code-review)
