@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # scripts/bootstrap_ruby: Installs homebrew.
-#                    Installs rvm.
-#                    Installs ruby.
-#                    Installs gems required to work with conichi ios projects
+#                         Installs rvm.
+#                         Installs ruby.
+#                         Installs Bundler.
 
 set -e
 
@@ -41,17 +41,13 @@ echo "${green}===== Setting rvm environment… =====${reset}"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
-echo "${green}===== Installing ruby 2.2.3… =====${reset}"
-rvm install 2.2.3 --disable-binary
-rvm alias create default ruby-2.2.3
-rvm use ruby-2.2.3
+echo "${green}===== Installing ruby 2.3.1… =====${reset}"
+rvm install 2.3.1 --disable-binary
+rvm alias create default ruby-2.3.1
+rvm use ruby-2.3.1
 
 echo "${green}===== Installing gems… =====${reset}"
 gem install bundler
-gem install cocoapods
-gem install fastlane
-gem install danger
-gem install match
 
 echo "${green}===== Script is succeeded… =====${reset}"
 echo "${green}===== Please put next two lines into your .bash_profile =====${reset}"
