@@ -526,3 +526,9 @@ if name == "Hello" {
   print("World")
 }
 ```
+
+## Avoid NSObject and @objc to Improve Performance
+
+Swift allows us to extend classes from `NSObject` to get Objective-C runtime features for an object. It also allows us to annotate Swift methods with `@objc` to allow the methods to be used by the Objective-C runtime.
+
+Supporting the Objective-C runtime means that method calls are going to be using dynamic dispatch instead of static or vtable dispatch. This end result is that methods that support the Objective-C runtime have a four times performance penalty when called. In practical usage, the performance hit may be negligible but the cool thing is that armed with this knowledge, we now know that method execution in Swift is four times faster than Objective-C.
