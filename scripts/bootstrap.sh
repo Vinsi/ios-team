@@ -8,8 +8,8 @@ reset=`tput sgr0`
 
 echo "${green}===== bootstrap ruby… =====${reset}"
 
-bootstrap_ruby
+bash bootstrap_ruby.sh
 
 echo "${green}===== bootstrap projects… =====${reset}"
 
-bootstrap_projects
+bash bootstrap_projects.sh
