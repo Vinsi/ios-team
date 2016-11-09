@@ -11,4 +11,4 @@ Generally, any new class has to be written in Swift, unless it brings many inter
 ## New features
 
 * New features are implemented in Swift. 
-* If a feature is totally dependent on Objective-C classes and must be written inside them, and writing it in Swift will bring many problems to solve specially in Unit Testing Swift from Objective-C, then it can be written in Objective-C.
+* If a feature is totally dependent on Objective-C classes and must be written inside them, and writing it in Swift will bring many problems to solve especially in Unit Testing Swift from Objective-C, then it can be written in Objective-C.
