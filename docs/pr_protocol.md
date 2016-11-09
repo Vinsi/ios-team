@@ -26,6 +26,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * Talk synchronously (e.g. chat, screen sharing, in person) if there are too many `I don't understand` or similar comments. Post a follow-up comment summarizing the discussion;
 * Use new GitHub review feature. Finish reviewing with `request changes` if needed, to block the merge.
 * It’s better not to say same comment more than once. You can just write the comment and then write ‘apply to all’.
+* It’s mandatory to give full feedback in your first review so that your first `change request` will contain everything regarding the first PR submission. If you are continuosly submitting `change request` for changes that can be caught from the first PR submission, then this will slow down the reviewing process.
 
 ## Having your PR reviewed
 
