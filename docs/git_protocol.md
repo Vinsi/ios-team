@@ -12,8 +12,6 @@ A guide for programming within version control. Some rules are checked automatic
 
 ## New feature flow
 
-* New features are implemented in Swift. If a feature is totally dependent on Objective-C classes and must be written inside them, and writing it in Swift will bring many errors to solve specially in unit testing importing files, then it can be written in Objective-C.
-
 Assume the related feature in JIRA has the `CNI-152` name.
 
 * Checkout new branch, named as a related JIRA ticket. Usually root tasks should be started from develop. However in case of subtask the checkout can be done from root feature branch.
