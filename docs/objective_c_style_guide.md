@@ -80,7 +80,7 @@ In method signatures, there SHOULD be a space after the scope (`-` or `+` symbol
 
 ```objc
 - (void)dynamicMethod;
-+ (NSMutableString *)statisMethod;
++ (NSMutableString *)staticMethod;
 ```
 
 The opening curly brace should be on the last line of the method signature not following by the empty string
@@ -107,7 +107,7 @@ or
 
 ## Variables
 
-Except custom setters and getters instance variables should be avoid.  
+Except custom setters and getters instance variables should be avoided.  
 
 ## Properties
 
@@ -206,9 +206,10 @@ extern NSString* const kCompanyName;
 
 // Class.m
 NSString* const kCompanyName = @"conichi";
+```
 
 or for private
-
+```objc
 static NSString* const kCompanyName = @"PrivateFoo";
 ```
 

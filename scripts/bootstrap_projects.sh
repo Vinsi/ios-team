@@ -11,7 +11,10 @@ reset=`tput sgr0`
 cd $($HOME)
 
 echo "${green}===== Creating home for all ios projects… =====${reset}"
-mkdir conichi
+if [ ! -d "conichi" ]; then
+	mkdir conichi
+fi
+
 
 echo "${green}===== Moving into conichi directory… =====${reset}"
 cd conichi
