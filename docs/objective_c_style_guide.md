@@ -379,3 +379,18 @@ Not
 ```objc
 #import <CNISDKCoreKit/CNISDKCoreKit.h>
 ```
+
+## Actions
+
+The method which represents the action handling should be named with a verb in mind:
+
+```objc
+- (IBAction)backButtonTapped:(id)sender;
+```
+
+Not
+```objc
+- (IBAction)backButtonClick:(id)sender;
+- (IBAction)backButtonTap:(id)sender;
+- (IBAction)backButtonAction:(id)sender;
+```
