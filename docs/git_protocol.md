@@ -43,3 +43,9 @@ git push origin CNI-152
 
 * If there is a JIRA ticket that is an Epic which has another JIRA sub-tickets then there should be an Epic branch for the Epic JIRA ticket and sub-branches from it for the JIRA sub-tickets.
 * If any of the sub-branches is finished, it needs to be instantly rebased into the Epic branch. Developers expect that the Epic branch is always up to date.
+* Rebasing is prefered instead of merging to have a clean history, but merging is only prefered if rebasing will waste a very long time of resolving conflicts.
+* Avoid force pushing into main branches (non-feature branches like develop or master branches) unless that this is aligned with the team with a reason for doing this.
+
+## Git commits
+
+* When any developer looks at the commits history, he/she should be able to easily understand what's behind every commit. History should be clean and all commits should be meaningful and should describe the output of the code written in the commit. So for example, "Update Changelog" commit is not meaningful and we should avoid such commits.
