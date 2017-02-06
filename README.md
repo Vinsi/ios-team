@@ -28,6 +28,7 @@ These guides are not to blindly followed but to discuss when in doubt.
 * [Code Review Guide](https://github.com/thoughtbot/guides/tree/master/code-review)
 * [Git Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/git_protocol.md)
 * [PR Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/pr_protocol.md)
+
 ## Technology Stack
 
 * Objective-C - most of the codebase is written in Objective-C, but new features are considered to be written in Swift.
