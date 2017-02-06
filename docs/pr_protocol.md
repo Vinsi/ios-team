@@ -14,6 +14,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * @mention teams that you want to involve in the discussion, and mention why. (`@conichi/backend, any concerns with this approach?`)
 * If the PR contains any UI changes, consider adding the screenshot or gif (if flow) to provide inline context about the changes
   and it brings also some fun ✨ and action ✨;
+* Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case.
 
 ## Reviewing the PR
 
@@ -27,6 +28,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * Use new GitHub review feature. Finish reviewing with `request changes` if needed, to block the merge.
 * It’s better not to say same comment more than once. You can just write the comment and then write ‘apply to all’.
 * It’s mandatory to give full feedback in your first review so that your first `change request` will contain everything regarding the first PR submission. If you are continuosly submitting `change request` for changes that can be caught from the first PR submission, then this will slow down the reviewing process.
+* If PR is marked as #trivial require only review from one reviewer, not more. This is for the sake of limiting interruptions (hey? could you review how I changed this "a" to capital "A" letter in my PR?) and saving precious time.
 
 ## Having your PR reviewed
 
