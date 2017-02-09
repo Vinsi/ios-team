@@ -29,6 +29,8 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * It’s better not to say same comment more than once. You can just write the comment and then write ‘apply to all’.
 * It’s mandatory to give full feedback in your first review so that your first `change request` will contain everything regarding the first PR submission. If you are continuosly submitting `change request` for changes that can be caught from the first PR submission, then this will slow down the reviewing process.
 * If PR is marked as #trivial require only review from one reviewer, not more. This is for the sake of limiting interruptions (hey? could you review how I changed this "a" to capital "A" letter in my PR?) and saving precious time.
+* It's better to provide a complete justficiation of the change request (not just providing another way to do something). If a complete justification is not provided, the PR owner might ask why and then the reviewer will provide the justification, which will let the PR last longer.
+* It's better to submit questions as comments, not a change request.
 
 ## Having your PR reviewed
 
