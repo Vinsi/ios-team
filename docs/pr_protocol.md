@@ -14,23 +14,22 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * @mention teams that you want to involve in the discussion, and mention why. (`@conichi/backend, any concerns with this approach?`)
 * If the PR contains any UI changes, consider adding the screenshot or gif (if flow) to provide inline context about the changes
   and it brings also some fun ✨ and action ✨;
-* Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case.
+* Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case;
 
 ## Reviewing the PR
 
 * If you disagree strongly, consider giving it a few minutes before responding; think before you react;
 * Ask, don’t tell. (`What do you think about trying...?` rather than `Don’t do...`);
-* Explain your reasons: refer to [Swift](https://github.com/conichiGMBH/ios-team/blob/master/docs/swift_style_guide.md)/[Objective-C](https://github.com/conichiGMBH/ios-team/blob/master/docs/objective_c_style_guide.md) style guide, attach relevant links or maybe it's personal preference;
+* Explain your reasons when you do a change request (to avoid long PRs): refer to [Swift](https://github.com/conichiGMBH/ios-team/blob/master/docs/swift_style_guide.md)/[Objective-C](https://github.com/conichiGMBH/ios-team/blob/master/docs/objective_c_style_guide.md) style guide, attach relevant links or maybe it's personal preference;
 * Avoid hyperbole. (“NEVER do…”);
 * Ask for clarification. (`I don't understand why do we need it. Can you clarify?`);
 * Don't use sarcasm;
 * Talk synchronously (e.g. chat, screen sharing, in person) if there are too many `I don't understand` or similar comments. Post a follow-up comment summarizing the discussion;
-* Use new GitHub review feature. Finish reviewing with `request changes` if needed, to block the merge.
-* It’s better not to say same comment more than once. You can just write the comment and then write ‘apply to all’.
-* It’s mandatory to give full feedback in your first review so that your first `change request` will contain everything regarding the first PR submission. If you are continuosly submitting `change request` for changes that can be caught from the first PR submission, then this will slow down the reviewing process.
-* If PR is marked as #trivial require only review from one reviewer, not more. This is for the sake of limiting interruptions (hey? could you review how I changed this "a" to capital "A" letter in my PR?) and saving precious time.
-* It's better to provide a complete justficiation of the change request (not just providing another way to do something). If a complete justification is not provided, the PR owner might ask why and then the reviewer will provide the justification, which will let the PR last longer.
-* It's better to submit questions as comments, not a change request.
+* Use new GitHub review feature. Finish reviewing with `request changes` if needed, to block the merge;
+* It’s better not to say same comment more than once. You can just write the comment and then write ‘apply to all’;
+* It’s mandatory to give full feedback in your first review so that your first `change request` will contain everything regarding the first PR submission. If you are continuosly submitting `change request` for changes that can be caught from the first PR submission, then this will slow down the reviewing process;
+* If PR is marked as #trivial require only review from one reviewer, not more. This is for the sake of limiting interruptions (hey? could you review how I changed this "a" to capital "A" letter in my PR?) and saving precious time;
+* Submit questions as comments, not a change request;
 
 ## Having your PR reviewed
 
@@ -42,7 +41,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 
 ## General
 
-We're all working hard to do our best, let's appreciate what people do and the time they spent. 
+We're all working hard to do our best, let's appreciate what people do and the time they spent;
 Don't forget to also have fun during the PR, use `gif` if it doesn't spread the focus or emoji to clarify tone   ✨
 
 These guidelines were inspired by Thoughtbot's code review [guide](https://github.com/thoughtbot/guides/tree/master/code-review) 
