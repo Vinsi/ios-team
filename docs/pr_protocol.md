@@ -36,6 +36,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * Consider leading with an expression of appreciation, especially when feedback has been mixed;
 * Be grateful for the reviewer's suggestions. (`Sounds good. I'll update.`);
 * If make changes, follow-up with the commit. (`Fixed in fa2s41`);
+* Separate each change request into commit, that helps to check the fix faster;
 * Offer clarification, explain the decisions you made to reach a solution in question;
 * Offer the in person (real/virtual) communication if the discussion is growing. Post a follow-up comment summarizing the discussion;
 
