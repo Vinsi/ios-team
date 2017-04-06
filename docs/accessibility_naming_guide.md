@@ -40,7 +40,7 @@ com.conichi.Login.CNISignInVC.signInBtn
 
 However, we don't write organizationBundle part explicitly, instead we create accessibility identifiers by specific helper method for that from Conichi_Meta utility:
 ```
-NSString *accessibilityID = CNIAccessibility(module, viewController, outlet)
+NSString *accessibilityID = CNIAccessibilityIdentifier(module, viewController, outlet)
 ```
 
 The reason why we don't specify product name in the bundle is that it differs for each target and there is no need to add it to the accessibilityID explicitly. In fact, it helps to reuse interface builder generated interfaces.
