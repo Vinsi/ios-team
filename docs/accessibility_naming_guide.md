@@ -19,10 +19,16 @@ We follow [reversed domain name notation](https://en.wikipedia.org/wiki/Reverse_
 organizationBundle.storyboardName.viewControllerName.testedIBOutletName
 ```
 
-if there is no IBOutlet set on certain UI class we set it to:
+if there is no IBOutlet set on certain UI class we set it to (if there is a nib file):
 
 ```
-organizationBundle.nibName.viewControllerName.viewControllerPropertyName
+organizationBundle.viperModuleName.viewControllerName.viewControllerPropertyName
+```
+
+or if nib file is containing specific view class
+
+```
+organizationBundle.viperModuleName.viewName.viewPropertyName
 ```
 
 finally, if above is not the case we set it to:
