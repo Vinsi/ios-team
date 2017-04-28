@@ -29,6 +29,12 @@ fi
 echo "${green}===== Installing gnupg… =====${reset}"
 brew install gnupg gnupg2
 
+echo "${green}===== Installing appledoc… =====${reset}"
+brew install appledoc
+
+echo "${green}===== Installing carthage… =====${reset}"
+brew install carthage
+
 if [ -z $(which rvm) ]; then
   echo "${green}===== Requesting keys to install rvm… =====${reset}"
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -50,6 +56,8 @@ echo "${green}===== Installing gems… =====${reset}"
 gem install bundler
 
 echo "${green}===== Script is succeeded… =====${reset}"
-echo "${green}===== Please put next two lines into your .bash_profile =====${reset}"
+echo "${green}===== Please add the next lines into your .bash_profile =====${reset}"
 echo "${green}[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"${reset}"
 echo "${green}export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem${reset}"
+echo "${green}export DANGER_GITHUB_API_TOKEN='please as the team to provide it to you'${reset}"
+echo "${green}export CONICHI_CI_GITHUB_TOKEN='please as the team to provide it to you'${reset}"
