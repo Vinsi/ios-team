@@ -61,7 +61,7 @@ rvm alias create default ruby-2.3.1
 rvm use ruby-2.3.1
 
 echo "${green}===== Installing gems… =====${reset}"
-gem install bundler
+sudo gem install bundler
 
 echo "${green}===== Script is succeeded… =====${reset}"
 echo "${green}===== Please add the next lines into your .bash_profile =====${reset}"
