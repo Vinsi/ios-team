@@ -29,11 +29,19 @@ fi
 echo "${green}===== Installing gnupg… =====${reset}"
 brew install gnupg gnupg2
 
-echo "${green}===== Installing appledoc… =====${reset}"
-brew install appledoc
+if brew ls --versions appledoc > /dev/null; then
+  echo "${green}===== appledoc is already installed. =====${reset}"
+else
+  echo "${green}===== Installing appledoc… =====${reset}"
+  brew install appledoc
+fi
 
-echo "${green}===== Installing carthage… =====${reset}"
-brew install carthage
+if brew ls --versions carthage > /dev/null; then
+  echo "${green}===== carthage is already installed. =====${reset}"
+else
+  echo "${green}===== Installing carthage… =====${reset}"
+  brew install carthage
+fi
 
 if [ -z $(which rvm) ]; then
   echo "${green}===== Requesting keys to install rvm… =====${reset}"
@@ -59,5 +67,5 @@ echo "${green}===== Script is succeeded… =====${reset}"
 echo "${green}===== Please add the next lines into your .bash_profile =====${reset}"
 echo "${green}[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"${reset}"
 echo "${green}export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem${reset}"
-echo "${green}export DANGER_GITHUB_API_TOKEN='please as the team to provide it to you'${reset}"
-echo "${green}export CONICHI_CI_GITHUB_TOKEN='please as the team to provide it to you'${reset}"
+echo "${green}export DANGER_GITHUB_API_TOKEN='please ask the team to provide it to you'${reset}"
+echo "${green}export CONICHI_CI_GITHUB_TOKEN='please ask the team to provide it to you'${reset}"
