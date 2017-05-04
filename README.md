@@ -29,6 +29,9 @@ These guides are not to blindly followed but to discuss when in doubt.
 * [Git Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/git_protocol.md)
 * [PR Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/pr_protocol.md)
 * [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/CNI-5559/docs/accessibility_naming_guide.md)
+* [New Project Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/new_project_guide.md)
+* [CI Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/ci_guide.md)
+
 ## Technology Stack
 
 * Objective-C - most of the codebase is written in Objective-C, but new features are considered to be written in Swift.
