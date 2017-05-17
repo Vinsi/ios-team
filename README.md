@@ -31,6 +31,7 @@ These guides are not to blindly followed but to discuss when in doubt.
 * [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/CNI-5559/docs/accessibility_naming_guide.md)
 * [New Project Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/new_project_guide.md)
 * [CI Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/ci_guide.md)
+* [Things to Remember in First Day]()
 
 ## Technology Stack
 
@@ -41,4 +42,6 @@ These guides are not to blindly followed but to discuss when in doubt.
 
 ## Testing
 
-We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta). For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/).
+We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta).
+
+For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/). We use iOS 9.3 as a main version for all UITests and all screenshots are captured in iPhone 6, iPhone 6 Plus and iPhone 5s simulators.
