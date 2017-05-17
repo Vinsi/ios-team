@@ -1,16 +1,13 @@
 # Things to remember...
 
-make sure you have already had access to all requiered accounts
+Make sure you have already had access to all required accounts.
 
 #### For Communication
-we use [Slack](https://slack.com/) for intenal comminucation in office, make sure to install slack and get an invitation to join Conichi Team.
+We use [Slack](https://slack.com/) for internal communication.
 
-also a Google-type email will be created for all other alignments, if you haven't had an invitation for Conichi email yet, feel free to ask about it.
-
-#### For Issue Tracking & Documnetion
-we are using [JIRA](https://www.atlassian.com/software/jira) as a main tool, so make sure to get an invitation from Conichi attlassian account.
-
-also we are using [Confluence](https://www.atlassian.com/software/confluence) as main source of documentation. so if you already have an invitation from Conichi attlassian, go ahead and take a look on our documents.
+#### For Issue Tracking & Documentation
+We use [JIRA](https://www.atlassian.com/software/jira) for scrum/kanban management.
+We use [Confluence](https://www.atlassian.com/software/confluence) for documentation.
 
 #### For Start!
 - We have multiple repos which we work on, if you haven't already been asked for your [GitHub](http://github.com) account, feel free to send your [GitHub](http://github.com) username to Anton Domashnev / Alex Di Mango and let them add you to your team/repos. in the case that you don't have your private GitHub account, you can create a new one.
