@@ -31,7 +31,7 @@ These guides are not to blindly followed but to discuss when in doubt.
 * [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/CNI-5559/docs/accessibility_naming_guide.md)
 * [New Project Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/new_project_guide.md)
 * [CI Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/ci_guide.md)
-* [Things to Remember in First Day](https://github.com/conichiGMBH/ios-team/blob/CNI-5939/docs/things_to_remember.md)
+* [Things to Remember in First Day](https://github.com/conichiGMBH/ios-team/blob/master/docs/things_to_remember.md)
 
 ## Technology Stack
 

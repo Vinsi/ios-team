@@ -1,5 +1,4 @@
 # Things to remember...
-
 Make sure you have already had access to all required accounts.
 
 #### For Communication
@@ -12,7 +11,7 @@ We use [Confluence](https://www.atlassian.com/software/confluence) for documenta
 #### For Start!
 - We have multiple repos which we work on, if you haven't already been asked for your [GitHub](http://github.com) account, feel free to share your [GitHub](http://github.com) username and let us add you to your team/repos. in the case that you don't have your private GitHub account, you can create a new one.
 
-- Get an invitation to access to our admin portals for various of environments which we use to work on and it's really important part for testing our apps.
+- Get an invitation to access our admin portals for various of environments which we use to work on and it's really important part for testing our apps.
 
 - Clone This repository ([ios-team](https://github.com/conichiGMBH/ios-team)) which include all guidelines of our team and installation scripts for Homebrew, openssl, Xcode command line tools, gnupg, rvm, ruby, bundler etc. Scripts also clone all necessary repos and bootstrap them. 
 
