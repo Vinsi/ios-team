@@ -14,6 +14,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * @mention teams that you want to involve in the discussion, and mention why. (`@conichi/backend, any concerns with this approach?`)
 * If the PR contains any UI changes, consider adding the screenshot or gif (if flow) to provide inline context about the changes
   and it brings also some fun ✨ and action ✨;
+* Request review of any UI changes made in your PR, our designerd will be happy to help :smile;
 * Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case;
 
 ## Reviewing the PR
