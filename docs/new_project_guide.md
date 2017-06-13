@@ -1,9 +1,13 @@
 ## General rules
 
 1. We make use of `Makefiles` in our projects to performs tasks
-2. We make use of [fastlane scan](https://github.com/fastlane/fastlane/tree/master/scan) in our projects to run tests
+2. We make use of [fastlane scan](https://github.com/fastlane/fastlane/tree/master/scan) in our projects to run tests.
 3. We make use of [Danger](danger.systems) in our projects to lint PR according to the rules
 4. We use git submodules, Bundler and CocoaPods for dependencies
+
+## Useful bits of information
+
+* For information about why we're splitting the build and test phase read: [xcodebuild](http://shashikantjagtap.net/speed-ios-ci-using-test-without-building-xctestrun-fastlane/) and [circle ci](https://discuss.circleci.com/t/xcode-exit-code-65/4284)
 
 ## How to set up a project
 
@@ -28,7 +32,6 @@ gem 'danger-slather'
 ```ruby
 clean true # clean the project before each test
 code_coverage true # collect code coverage from Xcode
-skip_build false # build the project before to have the products to test
 
 workspace "#{Project_Workspace}.xcworkspace"
 scheme "#{Project_Workspace}" # make sure to have it shared
@@ -89,6 +92,8 @@ dependencies:
 ```ruby
 ci: dependencies # run dependencies command first
   sh scripts/preheat_ios_simulator.sh 'iPhone 7' '10.3' # pass the device from Scanfile
-  bundle exec fastlane scan # run tests with configuration from Scanfile
+  sleep 15 # let the simulator to be available
+	bundle exec fastlane scan -B true # build the project for testing purpose
+	bundle exec fastlane scan -T true # run the tests without building the project
   bundle exec danger # executes Danger if run agains the PR
 ```
