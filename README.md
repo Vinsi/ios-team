@@ -46,3 +46,6 @@ These guides are not to blindly followed but to discuss when in doubt.
 We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta).
 
 For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/). We use iOS 9.3 as a main version for all UITests and all screenshots are captured in iPhone 6, iPhone 6 Plus, iPhone 5s and iPad Air simulators.
+
+## Troubleshooting
+* When `git ls-remote https://github.com/<your-repo-path>` is executed, it requires username and password. However, If GitHub's [Two-Factor authentication](https://help.github.com/articles/about-two-factor-authentication/) is enabled, the process will fail even though both of the username and password are correct. The solution is generating a Personal Access Token, and once the token is created, use the token as the password. In other words, copy the token from GitHub and paste it into Terminal. [Here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#using-a-token-on-the-command-line) is the reference.
