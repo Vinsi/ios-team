@@ -8,8 +8,8 @@ The home of iOS conichi team.
 If you're a new developer in a team start with the following:
 
 ```sh
-git clone https://github.com/conichiGMBH/ios-team-guidelines.git
-cd ios-team-guidelines
+git clone https://github.com/conichiGMBH/ios-team.git
+cd ios-team
 scripts/bootstrap_ruby.sh
 ```
 
@@ -25,10 +25,11 @@ These guides are not to blindly followed but to discuss when in doubt.
 
 * [Swift Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/swift_style_guide.md)
 * [Objective-C Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/objective_c_style_guide.md)
+* [Language Choice Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/language_choice_guide.md)
 * [Code Review Guide](https://github.com/thoughtbot/guides/tree/master/code-review)
 * [Git Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/git_protocol.md)
 * [PR Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/pr_protocol.md)
-* [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/CNI-5559/docs/accessibility_naming_guide.md)
+* [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/accessibility_naming_guide.md)
 * [New Project Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/new_project_guide.md)
 * [CI Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/ci_guide.md)
 * [Things to Remember in First Day](https://github.com/conichiGMBH/ios-team/blob/master/docs/things_to_remember.md)
