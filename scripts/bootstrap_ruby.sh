@@ -66,6 +66,13 @@ gem install bundler
 echo "${green}===== Script is succeeded… =====${reset}"
 echo "${green}===== Please add the next lines into your .bash_profile =====${reset}"
 echo "${green}[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"${reset}"
-echo "${green}export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem${reset}"
 echo "${green}export DANGER_GITHUB_API_TOKEN='please ask the team to provide it to you'${reset}"
 echo "${green}export CONICHI_CI_GITHUB_TOKEN='please ask the team to provide it to you'${reset}"
+
+# After adding SSL_CERT_FILE into .bash_profile, Homebrew will warn the following when running 'brew doctor'.
+# Setting SSL_CERT_FILE can break downloading files;
+# if that happens you should unset it before running Homebrew.
+# Homebrew uses the system curl which uses system certificates by default.
+# Setting SSL_CERT_FILE makes it use an outdated OpenSSL, which does not support modern OpenSSL certificate stores.
+# Therefore, comment the following line temporarily.
+# echo "${green}export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem${reset}"
