@@ -7,14 +7,15 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * Include the associated JIRA issue to the PR in the beginning. For example: `CNI-123; Title`;
 * Include the purpose of this PR in the title. For example `JIRA_ISSUE; This fixes missed check-out button title`;
 * Consider providing an overview of why the work is taking place (with any relevant links); don’t assume familiarity with the history;
-* Be explicit, if the Pull Request is work in progress, say so. A prefix of `[WIP]` 
+* Be explicit, if the Pull Request is work in progress, say so. A prefix of `[WIP]`
   in the title is a simple, common pattern to indicate that state. And [Danger](danger.systems) will notify people about it;
-* @mention individuals that you specifically want to involve in the discussion, 
+* @mention individuals that you specifically want to involve in the discussion,
   and mention why. (`@antondomashnev maybe we should consider only iOS9+ support`);
 * @mention teams that you want to involve in the discussion, and mention why. (`@conichi/backend, any concerns with this approach?`)
 * If the PR contains any UI changes, consider adding the screenshot or gif (if flow) to provide inline context about the changes
   and it brings also some fun ✨ and action ✨;
 * Request review of any UI changes made in your PR, our designerd will be happy to help :smile;
+* Make sure to update `CHANGELOG.yml` of the project before creating a PR. The note should include the JIRA ticket number, for example, `- CNI-7220;`. However, do NOT write the ticket number for our public and private SDK, even though there is a relevant ticket on JIRA. It is because external developers cannot understand the ticket number.
 * Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case;
 
 ## Reviewing the PR
@@ -46,7 +47,7 @@ A guide to help us be our best selves when we collaborate on pull requests.
 We're all working hard to do our best, let's appreciate what people do and the time they spent;
 Don't forget to also have fun during the PR, use `gif` if it doesn't spread the focus or emoji to clarify tone   ✨
 
-These guidelines were inspired by Thoughtbot's code review [guide](https://github.com/thoughtbot/guides/tree/master/code-review) 
-and GitHub's PR [guide](https://github.com/blog/1943-how-to-write-the-perfect-pull-request) and one [PR](https://github.com/conichiGMBH/ios-guest/pull/761) 
+These guidelines were inspired by Thoughtbot's code review [guide](https://github.com/thoughtbot/guides/tree/master/code-review)
+and GitHub's PR [guide](https://github.com/blog/1943-how-to-write-the-perfect-pull-request) and one [PR](https://github.com/conichiGMBH/ios-guest/pull/761)
 
 <img src="http://i.giphy.com/3o6Zt8qDiPE2d3kayI.gif" width="320" />
