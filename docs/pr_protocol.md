@@ -10,12 +10,12 @@ A guide to help us be our best selves when we collaborate on pull requests.
 * Be explicit, if the Pull Request is work in progress, say so. A prefix of `[WIP]`
   in the title is a simple, common pattern to indicate that state. And [Danger](danger.systems) will notify people about it;
 * @mention individuals that you specifically want to involve in the discussion,
-  and mention why. (`@antondomashnev maybe we should consider only iOS9+ support`);
+  and mention why.
 * @mention teams that you want to involve in the discussion, and mention why. (`@conichi/backend, any concerns with this approach?`)
 * If the PR contains any UI changes, consider adding the screenshot or gif (if flow) to provide inline context about the changes
   and it brings also some fun ✨ and action ✨;
 * Request review of any UI changes made in your PR, our designerd will be happy to help :smile;
-* Make sure to update `CHANGELOG.yml` of the project before creating a PR. The note should include the JIRA ticket number, for example, `- CNI-7220;`. However, do NOT write the ticket number for our public and private SDK, even though there is a relevant ticket on JIRA. It is because external developers cannot understand the ticket number.
+* Make sure to update `CHANGELOG.yml` of the project before creating a PR. The note should include the JIRA ticket number, for example, `- CNI-7220;`. However, do NOT write the ticket number for our public and private SDK, even though there is a relevant ticket on JIRA, because the changelog of our public SDK is copied from our private SDK, and external developers cannot understand the ticket number.
 * Mark the PR as #trivial if it's something that is too small to be in the changelog, or if it is something resembling one-line code typo fix etc. There is no clear border for that, but intuition should tell you when it's the case;
 
 ## Reviewing the PR
