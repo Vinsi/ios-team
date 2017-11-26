@@ -149,6 +149,18 @@ Not
 
 @end
 ```
+In order to avoid duplications, we should name the file more precisely.
+
+```objc
+UIView+CNIGeometry or NSString+CNIJSONConvertor
+```
+
+Not
+```objc
+UIView+Utility or NSString+Addon
+```
+
+Before creating a new category, make sure there isn't an existing or a similar one.
 
 ## Comments
 
