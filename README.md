@@ -23,6 +23,7 @@ scripts/bootstrap_projects.sh
 
 These guides are not to blindly followed but to discuss when in doubt.
 
+* [Things to Remember in First Day](https://github.com/conichiGMBH/ios-team/blob/master/docs/things_to_remember.md)
 * [Swift Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/swift_style_guide.md)
 * [Objective-C Style Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/objective_c_style_guide.md)
 * [Language Choice Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/language_choice_guide.md)
@@ -32,7 +33,6 @@ These guides are not to blindly followed but to discuss when in doubt.
 * [Accesibility Naming Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/accessibility_naming_guide.md)
 * [New Project Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/new_project_guide.md)
 * [CI Guide](https://github.com/conichiGMBH/ios-team/blob/master/docs/ci_guide.md)
-* [Things to Remember in First Day](https://github.com/conichiGMBH/ios-team/blob/master/docs/things_to_remember.md)
 
 ## Technology Stack
 
