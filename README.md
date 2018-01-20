@@ -47,5 +47,19 @@ We do test all our apps to ensure that our behavior is what we expect. Initially
 
 For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/). We use iOS 9.3 as a main version for all UITests and all screenshots are captured in iPhone 6, iPhone 6 Plus, iPhone 5s and iPad Air simulators.
 
+## Lokalise
+
+We use [Lokalise](https://lokalise.co) service for managing the strings localizations. To add / update / remove the key and its default English value, please firstly set the needed credentials in `.bash_profile`:
+```sh
+export LOKALISE_API_TOKEN='Please find it in shared 1Password ios-team vault'
+export LOKALISE_GUEST_PROJECT_ID='Please find it in shared 1Password ios-team vault'
+export LOKALISE_MERCHANT_PROJECT_ID='Please find it in shared 1Password ios-team vault'
+```
+
+and execute the following to type in the needed info prompted:
+```sh
+scripts/lokalise.sh
+```
+
 ## Troubleshooting
 * When `git ls-remote https://github.com/<your-repo-path>` is executed, it requires username and password. However, If GitHub's [Two-Factor authentication](https://help.github.com/articles/about-two-factor-authentication/) is enabled, the process will fail even though both of the username and password are correct. The solution is generating a Personal Access Token, and once the token is created, use the token as the password. In other words, copy the token from GitHub and paste it into Terminal. [Here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#using-a-token-on-the-command-line) is the reference.

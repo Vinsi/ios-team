@@ -68,6 +68,9 @@ echo "${green}===== Please add the next lines into your .bash_profile =====${res
 echo "${green}[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"${reset}"
 echo "${green}export DANGER_GITHUB_API_TOKEN='please ask the team to provide it to you'${reset}"
 echo "${green}export CONICHI_CI_GITHUB_TOKEN='please ask the team to provide it to you'${reset}"
+echo "${green}export LOKALISE_API_TOKEN='please ask the team to provide it to you'${reset}"
+echo "${green}export LOKALISE_GUEST_PROJECT_ID='please ask the team to provide it to you'${reset}"
+echo "${green}export LOKALISE_MERCHANT_PROJECT_ID='please ask the team to provide it to you'${reset}"
 
 # After adding SSL_CERT_FILE into .bash_profile, Homebrew will warn the following when running 'brew doctor'.
 # Setting SSL_CERT_FILE can break downloading files;
