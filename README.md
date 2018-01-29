@@ -45,7 +45,7 @@ These guides are not to blindly followed but to discuss when in doubt.
 
 We do test all our apps to ensure that our behavior is what we expect. Initially the codebase was written by `XCTest` framework. Recently we migrated to [Quick](https://github.com/Quick/Quick/) and [Specta](https://github.com/specta/specta).
 
-For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/). We use iOS 9.3 as a main version for all UITests and all screenshots are captured in iPhone 6, iPhone 6 Plus, iPhone 5s and iPad Air simulators.
+For the UI tests we use extensively [FBSnapshotTests](https://www.objc.io/issues/15-testing/snapshot-testing/). We use iOS 11.2 as a main version for all UITests and all screenshots are captured in iPhone 6, iPhone 6 Plus, iPhone 5s and iPad Air 2 simulators.
 
 ## Lokalise
 
