@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/sh
+
+# This is needed because we set the needed environment variables in .bashrc
+. $HOME/.bashrc
 
 set -e
 
